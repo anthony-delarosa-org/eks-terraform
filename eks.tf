@@ -1,3 +1,5 @@
+# EKS Cluster
+
 resource "aws_iam_role" "eks" {
   name = "${local.env}-${local.eks_name}-eks-cluster"
 
