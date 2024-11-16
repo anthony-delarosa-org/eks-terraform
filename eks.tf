@@ -70,6 +70,8 @@ resource "aws_eks_addon" "core_dns" {
   cluster_name  = aws_eks_cluster.eks.name
   addon_name    = "coredns"
   addon_version = "v1.11.1-eksbuild.4"
+
+  depends_on = [aws_eks_node_group.general]
 }
 
 resource "aws_eks_addon" "kube_proxy" {
